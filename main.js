@@ -4,7 +4,7 @@ const webdriver = require('selenium-webdriver');
     const driver = await new webdriver.Builder().forBrowser('chrome').setChromeOptions({
         "browserName": "chrome",
         "chromeOptions": {
-            "args": ["--no-sandbox"]
+            "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage"]
         }
     }).build();
 
