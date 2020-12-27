@@ -3,7 +3,7 @@ const webdriver = require('selenium-webdriver');
 (async function test() {
     const driver = await new webdriver.Builder().forBrowser('chrome').setChromeOptions({
         "browserName": "chrome",
-        "chromeOptions": {
+        "goog:chromeOptions": {
             "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage"]
         }
     }).build();
